@@ -1057,8 +1057,10 @@ def oneskillfromlist(param, SkillsProf, SkillsList):
                 skillone = int(input("Which skill would you like to be proficient in? "))
                 if skillone == 0:
                     SkillsProf.append(random.choice(SkillsList))
+                    break
                 elif 1 <= skillone <= len(SkillsList):
                     SkillsProf.append(SkillsList[skillone - 1])
+                    break
                 else:
                     print("Invalid choice, please choose a valid option.")
             except ValueError:
@@ -1098,9 +1100,11 @@ def twosimpleweapons(param, EQP):
                 if simpleweapon2 == 0:
                     SWRand2 = random.choice(SimpleWeapons)
                     EQP.append(dnd_tools.simple_weapons[SWRand2].copy())  
+                    break
                 elif 1 <= simpleweapon2 <= len(SimpleWeapons):
                     SimpleWep2 = SimpleWeaponsKeys[simpleweapon2 - 1]
                     EQP.append(dnd_tools.simple_weapons[SimpleWep2].copy())
+                    break
                 else:
                     print("Invalid choice, please choose a valid option.")
             except ValueError:
