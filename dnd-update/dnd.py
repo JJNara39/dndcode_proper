@@ -119,6 +119,7 @@ def dndCharGen(param, player):
             player.choose_class(param)
         if CharacterGenRand3 == "Background":       
             player.choose_bkg(param)
+    
     player.summation(param)
     if player.proficiencies is None:
         player.proficiencies = []
@@ -314,7 +315,7 @@ while True:
                 else:
                     print("Invalid choice, please choose a valid option.")
             dndCharGen(param, player)
-            continue
+            break
         elif start_choice == 2:
             if os.path.exists("player_list.json"):
                 with open("player_list.json", "r") as file:
@@ -331,6 +332,7 @@ while True:
                         if 1 <= character_choice <= len(player_list):
                             selected_player = player_list[character_choice - 1]
                             player = load_character(selected_player)
+                            break
                         else:
                             print("Invalid choice. Please enter a number from the list.")
                     except ValueError:
