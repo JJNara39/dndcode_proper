@@ -404,49 +404,49 @@ class Player:
                 if i == 1:
                     self.data['Wpn Name'] = atk
                     if attack_data['Modifier'] == 'STR':
-                        self.data[f'Wpn{i} AtkBonus'] = f"{"+" if self.StrMod >= 0 else "-"}" + f"{self.StrMod}"
+                        self.data[f'Wpn{i} AtkBonus'] = f"{'+' if self.StrMod >= 0 else '-'}" + f"{self.StrMod}"
                     elif attack_data['Modifier'] == 'DEX':
-                        self.data[f'Wpn{i} AtkBonus'] = f"{"+" if self.DexMod >= 0 else "-"}" + f"{self.DexMod}"
+                        self.data[f'Wpn{i} AtkBonus'] = f"{'+' if self.DexMod >= 0 else '-'}" + f"{self.DexMod}"
                     elif attack_data['Modifier'] == 'CON':
-                        self.data[f'Wpn{i} AtkBonus'] = f"{"+" if self.ConMod >= 0 else "-"}" + f"{self.ConMod}"
+                        self.data[f'Wpn{i} AtkBonus'] = f"{'+' if self.ConMod >= 0 else '-'}" + f"{self.ConMod}"
                     elif attack_data['Modifier'] == 'Finesse':
                         MaxMod = max(self.StrMod, self.DexMod)
-                        self.data[f'Wpn{i} AtkBonus'] = f"{"+" if MaxMod >= 0 else "-"}" + f"{MaxMod}"    
-                    self.data[f'Wpn{i} Damage'] = f"{attack_data['Damage']} " + f"{"+" if int(self.data[f'Wpn{i} AtkBonus']) >= 0 else "-"} " + f"{abs(int(self.data[f'Wpn{i} AtkBonus']))} " + f"{attack_data['Damage Type']}" 
+                        self.data[f'Wpn{i} AtkBonus'] = f"{'+' if MaxMod >= 0 else '-'}" + f"{MaxMod}"    
+                    self.data[f'Wpn{i} Damage'] = f"{attack_data['Damage']} " + f"{'+' if int(self.data[f'Wpn{i} AtkBonus']) >= 0 else '-'} " + f"{abs(int(self.data[f'Wpn{i} AtkBonus']))} " + f"{attack_data['Damage Type']}" 
                 elif i == 2:
                     self.data[f'Wpn Name {i}'] = atk
                     if attack_data['Modifier'] == 'STR':
-                        self.data[f'Wpn{i} AtkBonus '] = f"{"+" if self.StrMod >= 0 else "-"}" + f"{self.StrMod}"
+                        self.data[f'Wpn{i} AtkBonus '] = f"{'+' if self.StrMod >= 0 else '-'}" + f"{self.StrMod}"
                     elif attack_data['Modifier'] == 'DEX':
-                        self.data[f'Wpn{i} AtkBonus '] = f"{"+" if self.DexMod >= 0 else "-"}" + f"{self.DexMod}"
+                        self.data[f'Wpn{i} AtkBonus '] = f"{'+' if self.DexMod >= 0 else '-'}" + f"{self.DexMod}"
                     elif attack_data['Modifier'] == 'CON':
-                        self.data[f'Wpn{i} AtkBonus '] = f"{"+" if self.ConMod >= 0 else "-"}" + f"{self.ConMod}"
+                        self.data[f'Wpn{i} AtkBonus '] = f"{'+' if self.ConMod >= 0 else '-'}" + f"{self.ConMod}"
                     elif attack_data['Modifier'] == 'Finesse':
                         MaxMod = max(self.StrMod, self.DexMod)
-                        self.data[f'Wpn{i} AtkBonus '] = f"{"+" if MaxMod >= 0 else "-"}" + f"{MaxMod}"    
-                    self.data[f'Wpn{i} Damage '] = f"{attack_data['Damage']} " + f"{"+" if int(self.data[f'Wpn{i} AtkBonus ']) >= 0 else "-"} " + f"{abs(int(self.data[f'Wpn{i} AtkBonus ']))} " + f"{attack_data['Damage Type']}"
+                        self.data[f'Wpn{i} AtkBonus '] = f"{'+' if MaxMod >= 0 else '-'}" + f"{MaxMod}"    
+                    self.data[f'Wpn{i} Damage '] = f"{attack_data['Damage']} " + f"{'+' if int(self.data[f'Wpn{i} AtkBonus ']) >= 0 else '-'} " + f"{abs(int(self.data[f'Wpn{i} AtkBonus ']))} " + f"{attack_data['Damage Type']}"
                 elif i == 3:
                     self.data[f'Wpn Name {i}'] = atk
                     if attack_data['Modifier'] == 'STR':
-                        self.data[f'Wpn{i} AtkBonus  '] = f"{"+" if self.StrMod >= 0 else "-"}" + f"{self.StrMod}"
+                        self.data[f'Wpn{i} AtkBonus  '] = f"{'+' if self.StrMod >= 0 else '-'}" + f"{self.StrMod}"
                     elif attack_data['Modifier'] == 'DEX':
-                        self.data[f'Wpn{i} AtkBonus  '] = f"{"+" if self.DexMod >= 0 else "-"}" + f"{self.DexMod}"
+                        self.data[f'Wpn{i} AtkBonus  '] = f"{'+' if self.DexMod >= 0 else '-'}" + f"{self.DexMod}"
                     elif attack_data['Modifier'] == 'CON':
-                        self.data[f'Wpn{i} AtkBonus  '] = f"{"+" if self.ConMod >= 0 else "-"}" + f"{self.ConMod}"
+                        self.data[f'Wpn{i} AtkBonus  '] = f"{'+' if self.ConMod >= 0 else '-'}" + f"{self.ConMod}"
                     elif attack_data['Modifier'] == 'Finesse':
                         MaxMod = max(self.StrMod, self.DexMod)
-                        self.data[f'Wpn{i} AtkBonus  '] = f"{"+" if MaxMod >= 0 else "-"}" + f"{MaxMod}"    
-                    self.data[f'Wpn{i} Damage '] = f"{attack_data['Damage']} " + f"{"+" if int(self.data[f'Wpn{i} AtkBonus  ']) >= 0 else "-"} " + f"{abs(int(self.data[f'Wpn{i} AtkBonus  ']))} " + f"{attack_data['Damage Type']}"
+                        self.data[f'Wpn{i} AtkBonus  '] = f"{'+' if MaxMod >= 0 else '-'}" + f"{MaxMod}"    
+                    self.data[f'Wpn{i} Damage '] = f"{attack_data['Damage']} " + f"{'+' if int(self.data[f'Wpn{i} AtkBonus  ']) >= 0 else '-'} " + f"{abs(int(self.data[f'Wpn{i} AtkBonus  ']))} " + f"{attack_data['Damage Type']}"
             else:
                 if attack_data['Modifier'] == 'STR':
-                    atkscdict[atk] = f"{atk} - {attack_data['Modifier']} - {attack_data['Damage']} " + f"{"+" if self.StrMod >= 0 else "-"} " + f"{abs(self.StrMod)} " + f"{attack_data['Damage Type']}"
+                    atkscdict[atk] = f"{atk} - {attack_data['Modifier']} - {attack_data['Damage']} " + f"{'+' if self.StrMod >= 0 else '-'} " + f"{abs(self.StrMod)} " + f"{attack_data['Damage Type']}"
                 elif attack_data['Modifier'] == 'DEX':
-                    atkscdict[atk] = f"{atk} - {attack_data['Modifier']} - {attack_data['Damage']} " + f"{"+" if self.DexMod >= 0 else "-"} " + f"{abs(self.DexMod)} " + f"{attack_data['Damage Type']}"
+                    atkscdict[atk] = f"{atk} - {attack_data['Modifier']} - {attack_data['Damage']} " + f"{'+' if self.DexMod >= 0 else '-'} " + f"{abs(self.DexMod)} " + f"{attack_data['Damage Type']}"
                 elif attack_data['Modifier'] == 'CON':
-                    atkscdict[atk] = f"{atk} - {attack_data['Modifier']} - {attack_data['Damage']} " + f"{"+" if self.ConMod >= 0 else "-"} " + f"{abs(self.ConMod)} " + f"{attack_data['Damage Type']}"
+                    atkscdict[atk] = f"{atk} - {attack_data['Modifier']} - {attack_data['Damage']} " + f"{'+' if self.ConMod >= 0 else '-'} " + f"{abs(self.ConMod)} " + f"{attack_data['Damage Type']}"
                 elif attack_data['Modifier'] == 'Finesse':
                     MaxMod = max(self.StrMod, self.DexMod)
-                    atkscdict[atk] = f"{atk} - {attack_data['Modifier']} - {attack_data['Damage']} " + f"{"+" if MaxMod >= 0 else "-"} " + f"{abs(MaxMod)} " + f"{attack_data['Damage Type']}"
+                    atkscdict[atk] = f"{atk} - {attack_data['Modifier']} - {attack_data['Damage']} " + f"{'+' if MaxMod >= 0 else '-'} " + f"{abs(MaxMod)} " + f"{attack_data['Damage Type']}"
         # Convert remaining attacks into a string for the Attacks & Spellcasting section
         attacksspellcasting_str = "\n".join(atkscdict.values())
         self.data['AttacksSpellcasting'] = attacksspellcasting_str        
