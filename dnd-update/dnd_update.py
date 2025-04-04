@@ -434,7 +434,7 @@ def dnd_update(player):
             if player.clerlvl == 20:                        
                 player.notes["Cleric 7th Level Spell Slots Known"] = 2
             player.notes["Destroy Undead"] = f"When an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is {player.clericdestroyundeadcr}."
-            player.notes["Channel Divinity"] = f"You gain the ability to channel divine energy directly from your deity, using that energy to fuel magical effects. You start with two such effects: Turn Undead and an effect determined by your domain. Some domains grant you additional effects as you advance in levels, as noted in the domain description.When you use your Channel Divinity, you choose which effect to create. You must then finish a short or long rest to use your Channel Divinity again.\nSome Channel Divinity effects require saving throws. When you use such an effect from this class, the DC equals your cleric spell save DC, or against {player.spellsavedc["Cleric Spell Save DC"]}.\nYou can use Channel Divinity {player.clericchanneldivinity} times between rests. When you finish a short or long rest, you regain your expended uses."
+            player.notes["Channel Divinity"] = f"You gain the ability to channel divine energy directly from your deity, using that energy to fuel magical effects. You start with two such effects: Turn Undead and an effect determined by your domain. Some domains grant you additional effects as you advance in levels, as noted in the domain description.When you use your Channel Divinity, you choose which effect to create. You must then finish a short or long rest to use your Channel Divinity again.\nSome Channel Divinity effects require saving throws. When you use such an effect from this class, the DC equals your cleric spell save DC, or against {player.spellsavedc['Cleric Spell Save DC']}.\nYou can use Channel Divinity {player.clericchanneldivinity} times between rests. When you finish a short or long rest, you regain your expended uses."
 
         if player.Class[i] == "Druid":
             player.hitdice["Druid Hitdie"] = f"{player.druidlvl}d8"
@@ -442,7 +442,7 @@ def dnd_update(player):
                 player.hitpoints += (8 + player.ConMod)
             else:
                 player.hitpoints += (8 + player.ConMod + hpcalc(player.druidlvl, dice, 8))  
-            player.spellsavedc["Druid Spell Save DC"] = 8 + player.profbonus + player.WisMod
+            player.spellsavedc['Druid Spell Save DC'] = 8 + player.profbonus + player.WisMod
             player.spellattackmod["Druid Spell Attack Mod"] = player.profbonus + player.WisMod 
             
             if player.druidlvl >= 2:
